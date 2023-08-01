@@ -1,5 +1,5 @@
 ---
-- name: making a new yaml file from vs code 
+- name: making a new yaml file from vscodium
   hosts: all
   tasks:
     - name: create the file
