@@ -1,0 +1,9 @@
+[sno]
+utility.ocp4.sno.testing
+
+[sno:vars]
+for_demo="from inventory file"
+
+[bm]
+utility.ocp4.bm.testing
+

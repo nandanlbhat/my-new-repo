@@ -1,0 +1,1 @@
+for_demo: from inventory group_vars/all

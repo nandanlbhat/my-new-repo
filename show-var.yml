@@ -1,0 +1,15 @@
+---
+- name: show value of an encrypted variable
+  hosts: sno
+  gather_facts: false
+
+  vars_files:
+    - test.yml
+
+  tasks:
+    - name: show content of secret_var
+      debug:
+        var: secret_var
+    
+
+...
