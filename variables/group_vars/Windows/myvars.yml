@@ -1,0 +1,7 @@
+iis_packages_name:
+  - Web-Server
+  - NET-Framework-Core
+  - Web-Asp-Net45
+iis_site_path: C:\sites\variables
+iis_site_name: "DO417-variables"
+iis_site_port: 8080
