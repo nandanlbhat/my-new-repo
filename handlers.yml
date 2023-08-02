@@ -1,0 +1,30 @@
+---
+- name: try out handlers
+  hosts: all
+  gather_facts: false
+
+  handlers:
+    - name: handler_2
+      debug:
+        msg: running handler_2
+
+    - name: handler_1
+      debug:
+        msg: running handler_1
+
+  tasks:
+    - name: task_1
+      copy:
+        content: this is task_1_revised
+        dest: /tmp/task_1_file.txt
+      notify: handler_1
+      when: inventory_hostname == 'utility.ocp4.sno.testing'
+
+    - name: task_2
+      copy:
+        content: this is task_2
+        dest: /tmp/task_2_file.txt
+      notify: handler_2
+
+    
+...

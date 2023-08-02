@@ -1,0 +1,36 @@
+---
+- name: try a block
+  hosts: sno
+  gather_facts: false
+
+  tasks:
+    
+    - block:
+        - name: first task in block
+          debug:
+            msg: first task in block
+          failed_when: true
+
+        - name: second task in block
+          debug:
+            msg: second task in block
+      rescue:
+        - name: first task in rescue
+          debug:
+            msg: first task in rescue
+
+        - name: second task in rescue
+          debug:
+            msg: second task in rescue
+
+      always:
+        - name: first task in always
+          debug:
+            msg: first task in always
+
+        - name: second task in always
+          debug:
+            msg: second task in always
+
+
+...

@@ -1,0 +1,27 @@
+---
+- name: force handlers
+  hosts: sno
+  gather_facts: false
+  force_handlers: true
+
+  tasks:
+
+    - name: run the date command
+      command: date
+      notify: date_handler
+
+    - name: fail intentionally
+      fail:
+        msg: failed intentionally
+      #ignore_errors: true
+
+    - name: task after fail task
+      debug:
+        msg: did it run?
+
+  handlers:
+    - name: date_handler
+      debug:
+        msg: the handler ran for date command notification
+...
+
