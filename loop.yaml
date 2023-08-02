@@ -1,0 +1,29 @@
+---
+- name: repeat some type of task
+  hosts: all
+  gather_facts: false
+  
+  vars:
+    myitems:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+
+  tasks:
+    - name: a repeating task 
+      debug:
+        msg: output of task {{ item }}
+      loop: "{{ myitems }}"
+
+    - name: a repeating task 
+      debug:
+        msg: output of task {{ item }}
+      loop:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+...

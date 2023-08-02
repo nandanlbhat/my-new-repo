@@ -1,0 +1,27 @@
+---
+- name: repeat some type of task
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: task 1
+      debug:
+        msg: output of task 1
+
+    - name: task 2
+      debug:
+        msg: output of task 2
+
+    - name: task 3
+      debug:
+        msg: output of task 3
+
+    - name: task 4
+      debug:
+        msg: output of task 4
+
+    - name: task 5
+      debug:
+        msg: output of task 5
+
+...

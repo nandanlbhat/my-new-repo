@@ -1,0 +1,17 @@
+---
+- name: try the when conditional
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: give welcome from SNO
+      debug:  
+        msg: welcome to single node openshift host
+      when: '"sno" in inventory_hostname'
+      #when: inventory_hostname == 'utility.ocp4.sno.testing' 
+
+    - name: give welcome from BM
+      debug:  
+        msg: welcome to bare metal host
+      when: inventory_hostname == 'utility.ocp4.bm.testing' 
+...
