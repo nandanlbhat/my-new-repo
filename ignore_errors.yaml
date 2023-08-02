@@ -1,0 +1,16 @@
+---
+- name: try ignoring a small error
+  hosts: sno
+  gather_facts: false
+
+  tasks:
+    - name: fail intentionally
+      fail:
+        msg: failed intentionally
+      ignore_errors: true
+
+    - name: task after fail task
+      debug:
+        msg: did it run?
+...
+

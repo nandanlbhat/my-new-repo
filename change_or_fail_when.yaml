@@ -1,0 +1,20 @@
+---
+- name: try conditional change or failure
+  hosts: sno
+  gather_facts: false
+
+  tasks:
+    #- name: look for a file in output and fail if file is present
+    #  command: ls /tmp
+    #  register: command_out
+    #  failed_when: '"txt" in command_out["stdout"]'
+
+    - name: look for a file in output and fail if file is present
+      command: ls /tmp
+      register: command_out
+      changed_when: false
+
+    #- name: show variable command_out
+    #  debug:
+    #    var: command_out
+...
