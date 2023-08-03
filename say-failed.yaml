@@ -1,0 +1,10 @@
+---
+- name: output failure
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: output failure message
+      debug:
+        msg: we failed
+...

@@ -1,0 +1,10 @@
+---
+- name: fail intentionally
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: fail intentionally
+      fail:
+        msg: task failed successfully
+...
