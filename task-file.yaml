@@ -1,0 +1,5 @@
+---
+- name: a detached task in a file
+  debug:
+    msg: this is an imported task
+...

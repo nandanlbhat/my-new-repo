@@ -1,0 +1,9 @@
+---
+- name: use include_tasks to run something
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: include the task file and run it
+      include_tasks: task-file.yaml
+...

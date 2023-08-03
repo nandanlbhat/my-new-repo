@@ -1,0 +1,5 @@
+---
+# handlers file for student.testrole
+- name: show_message
+  debug:
+    msg: the template was delivered to the managed host

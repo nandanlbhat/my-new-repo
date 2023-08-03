@@ -1,0 +1,3 @@
+---
+# defaults file for student.testrole
+my_template_var: from role defaults

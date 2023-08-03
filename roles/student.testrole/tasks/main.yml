@@ -1,0 +1,7 @@
+---
+# tasks file for student.testrole
+- name: deliver the templated file
+  template:
+    src: myfile.txt.j2
+    dest: /tmp/myfile.txt
+  notify: show_message

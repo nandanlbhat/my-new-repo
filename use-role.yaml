@@ -1,0 +1,9 @@
+---
+- name: try using a role
+  hosts: all
+  gather_facts: false
+
+  roles:
+    - role: student.testrole
+      my_template_var: from cmdline
+...

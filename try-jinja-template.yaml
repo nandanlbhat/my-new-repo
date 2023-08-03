@@ -1,0 +1,10 @@
+---
+- name: try jinja2 template rendering
+  hosts: all
+
+  tasks:
+    - template:
+        src: myfile.j2
+        dest: /tmp/myfile.txt
+
+...
